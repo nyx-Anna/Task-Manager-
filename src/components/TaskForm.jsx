@@ -19,10 +19,12 @@ function TaskForm({ addTask }) {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter task..."
-        className="flex-1 p-2 border rounded"
+        className="flex-1 p-2 border rounded-lg focus:outline-1 focus:ring-indigo-400"
       />
 
-      <button className="bg-blue-500 text-white px-4 rounded">Add</button>
+      <button className="bg-blue-500 hover:bg-indigo-600 text-black px-5 rounded-lg transition">
+        Add
+      </button>
     </form>
   );
 }

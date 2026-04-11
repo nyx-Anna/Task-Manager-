@@ -1,7 +1,7 @@
 // Passes them dowm
 import TaskItem from "./TaskItem";
 
-function TaskList({ tasks, deleteTask, toggleTask }) {
+function TaskList({ tasks, deleteTask, toggleTask, editTask }) {
   return (
     <div>
       {tasks.map((task) => (
@@ -10,6 +10,7 @@ function TaskList({ tasks, deleteTask, toggleTask }) {
           task={task}
           deleteTask={deleteTask}
           toggleTask={toggleTask}
+          editTask={editTask}
         />
       ))}
     </div>

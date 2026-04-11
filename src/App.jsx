@@ -1,12 +1,16 @@
 // Holds state + functions
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import TaskItem from "./components/TaskItem";
 
 function App() {
   // state to store tasks
-  const [tasks, setTasks] = useState([]);
+  // const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
 
   // function to add task
   const addTask = (text) => {
@@ -31,6 +35,16 @@ function App() {
     );
   };
 
+  const editTask = (id, newText) => {
+    setTasks(
+      tasks.map((task) => (task.id === id ? { ...task, text: newText } : task)),
+    );
+  };
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
   return (
     <div className="min-h-screen bg-linear-to-br from-indigo-200 to-purple-200 flex items-center justify-center">
       {/* Card Container */}
@@ -45,6 +59,7 @@ function App() {
           tasks={tasks}
           deleteTask={deleteTask}
           toggleTask={toggleTask}
+          editTask={editTask}
         />
       </div>
     </div>

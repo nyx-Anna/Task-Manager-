@@ -57,8 +57,8 @@ function App() {
     <div
       className={`min-h-screen flex items-center justify-center ${
         darkMode
-          ? "bg-gray-900 text-white"
-          : "bg-linear-to-br from-indigo-200 to-purple-200"
+          ? "bg-gray-700 text-black"
+          : "bg-linear-to-br from-indigo-200 to-violet-400"
       }`}
     >
       {/* Card Container */}
@@ -69,12 +69,12 @@ function App() {
       >
         <button
           onClick={toggleTheme}
-          className="mb-3 px-4 py-2 rounded-lg shadow bg-indigo-500 hover:bg-indigo-600 transition"
+          className="mb-3 px-4 py-2 rounded-lg shadow bg-violet-200 hover:bg-violet-600 transition"
         >
           {darkMode ? "🌞" : "🌙"}
         </button>
         <h1 className="text-2xl font-bold text-center mb-4">Task Manager</h1>
-        <p className="text-center text-indigo-600 mb-3">
+        <p className="text-center text-violet-600 mb-3">
           Total: {tasks.length} | Completed:{" "}
           {tasks.filter((t) => t.completed).length}
         </p>
@@ -85,21 +85,21 @@ function App() {
         <div className="flex justify-center gap-2 mb-4">
           <button
             onClick={() => setFilter("all")}
-            className="px-3 py-1 bg-gray-300 rounded"
+            className="px-3 py-1 bg-violet-600 rounded"
           >
             All
           </button>
 
           <button
             onClick={() => setFilter("completed")}
-            className="px-3 py-1 bg-green-300 rounded"
+            className="px-3 py-1 bg-violet-600 rounded"
           >
             Completed
           </button>
 
           <button
             onClick={() => setFilter("pending")}
-            className="px-3 py-1 bg-yellow-300 rounded"
+            className="px-3 py-1 bg-violet-600 rounded"
           >
             Pending
           </button>

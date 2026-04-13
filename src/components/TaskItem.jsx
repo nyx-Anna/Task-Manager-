@@ -12,7 +12,7 @@ function TaskItem({ task, deleteTask, toggleTask, editTask }) {
   };
 
   return (
-    <div className="flex justify-between items-center p-3 mb-2 bg-gray-100 rounded-lg shadow-sm">
+    <div className="flex justify-between items-center p-3 mb-3 bg-violet-200 rounded-lg shadow-sm">
       {/* EDIT MODE */}
       {isEditing ? (
         <input
@@ -22,7 +22,7 @@ function TaskItem({ task, deleteTask, toggleTask, editTask }) {
         />
       ) : (
         <span
-          className={`${task.completed ? "line-through text-gray-400" : ""}`}
+          className={`${task.completed ? "line-through text-black-400" : ""}`}
         >
           {task.text}
         </span>
@@ -31,25 +31,25 @@ function TaskItem({ task, deleteTask, toggleTask, editTask }) {
       <div className="flex gap-2">
         {/* Save/Edit */}
         {isEditing ? (
-          <button onClick={handleEdit} className="text-blue-500">
+          <button onClick={handleEdit} className="text-violet-600">
             Save
           </button>
         ) : (
           <button
             onClick={() => setIsEditing(true)}
-            className="text-yellow-500"
+            className="text-violet-600"
           >
             Edit
           </button>
         )}
 
         {/* Toggle */}
-        <button onClick={() => toggleTask(task.id)} className="text-green-500">
+        <button onClick={() => toggleTask(task.id)} className="text-violet-600">
           ✔
         </button>
 
         {/* Delete */}
-        <button onClick={() => deleteTask(task.id)} className="text-red-500">
+        <button onClick={() => deleteTask(task.id)} className="text-violet-600">
           ✖
         </button>
       </div>

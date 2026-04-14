@@ -58,7 +58,7 @@ function App() {
       className={`min-h-screen flex items-center justify-center ${
         darkMode
           ? "bg-gray-700 text-black"
-          : "bg-linear-to-br from-indigo-200 to-violet-400"
+          : "bg-linear-to-br from-violet-200 to-violet-400"
       }`}
     >
       {/* Card Container */}

@@ -57,14 +57,14 @@ function App() {
     <div
       className={`min-h-screen flex items-center justify-center px-8 ${
         darkMode
-          ? "bg-gray-700 text-black"
+          ? "bg-violet-200 text-black"
           : "bg-linear-to-br from-violet-200 to-violet-400"
       }`}
     >
       {/* Card Container */}
       <div
         className={`p-6 rounded-2xl shadow-lg w-full max-w-2xl ${
-          darkMode ? "bg-gray-800" : "bg-white"
+          darkMode ? "bg-gray-700" : "bg-white"
         }`}
       >
         <button

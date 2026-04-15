@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen flex items-center justify-center ${
+      className={`min-h-screen flex items-center justify-center px-8 ${
         darkMode
           ? "bg-gray-700 text-black"
           : "bg-linear-to-br from-violet-200 to-violet-400"
@@ -63,7 +63,7 @@ function App() {
     >
       {/* Card Container */}
       <div
-        className={`p-6 rounded-2xl shadow-lg w-full max-w-md ${
+        className={`p-6 rounded-2xl shadow-lg w-full max-w-2xl ${
           darkMode ? "bg-gray-800" : "bg-white"
         }`}
       >
@@ -83,23 +83,24 @@ function App() {
         <TaskForm addTask={addTask} />
 
         <div className="flex justify-center gap-2 mb-4">
+          {/* filter buttons */}
           <button
             onClick={() => setFilter("all")}
-            className="px-3 py-1 bg-violet-600 rounded"
+            className="px-3 py-1 bg-violet-200 rounded hover:bg-violet-600"
           >
             All
           </button>
 
           <button
             onClick={() => setFilter("completed")}
-            className="px-3 py-1 bg-violet-600 rounded"
+            className="px-3 py-1 bg-violet-200 rounded hover:bg-violet-600"
           >
             Completed
           </button>
 
           <button
             onClick={() => setFilter("pending")}
-            className="px-3 py-1 bg-violet-600 rounded"
+            className="px-3 py-1 bg-violet-200 rounded hover:bg-violet-600"
           >
             Pending
           </button>

@@ -57,7 +57,7 @@ function App() {
     <div
       className={`min-h-screen flex items-center justify-center px-8 ${
         darkMode
-          ? "bg-violet-200 text-black"
+          ? "bg-gray-800 text-white"
           : "bg-linear-to-br from-violet-200 to-violet-400"
       }`}
     >
@@ -69,7 +69,9 @@ function App() {
       >
         <button
           onClick={toggleTheme}
-          className="mb-3 px-4 py-2 rounded-lg shadow bg-violet-200 hover:bg-violet-600 transition"
+          className='mb-3 px-4 py-2 rounded-lg backfdrop-blur-md border ${darkMode
+            ? "bg-gray-800"
+            : "bg-violet-200"}'
         >
           {darkMode ? "🌞" : "🌙"}
         </button>
